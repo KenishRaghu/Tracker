@@ -10,13 +10,21 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack{
-            NavigationLink(destination: ColorPageView()){
-                Text("Blue")
+            NavigationLink(destination: ColorPageView(color: .blue, label: "Blue")){
+                Text("BLUE")
+                    .ignoresSafeArea(.all, edges: .bottom)
                     .font(.headline)
                     .foregroundColor(.white)
                     .background(Color.blue)
                     
             }
+            NavigationLink(destination: ColorPageView(color: .red, label: "Red")){
+                Text("RED")
+                    .ignoresSafeArea(.all, edges: .bottom)
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .background(Color.red)
+                }
             
         }
         .padding()

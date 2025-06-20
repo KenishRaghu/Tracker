@@ -8,15 +8,18 @@
 import SwiftUI
 
 struct ColorPageView: View {
+    var color: Color
+    var label: String
+    
     var body: some View {
         ZStack {
             Rectangle()
-                .fill(Color.blue)
+                .fill(color)
                 .ignoresSafeArea()
-            Text("Blue Color")
+            Text(label)
                 .font(.headline)
-                .foregroundColor(.white)
+                .foregroundStyle(.white)
         }
-        .navigationTitle(Text("Blue Color"))
+        .navigationTitle(label)
     }
 }
